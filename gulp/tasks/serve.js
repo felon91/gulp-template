@@ -4,11 +4,11 @@ module.exports = function () {
       server: 'build/'
     });
 
-    $.gulp.watch('sass/**/*.scss', ['sass']);
-    $.gulp.watch('*.html', ['html']);
-    $.gulp.watch('js/**/*.js', ['scripts']);
-    $.gulp.watch('css/**/*.css', ['css']);
-    $.gulp.watch('img/**/*.{png,jpg,svg}', ['allimg']);
-    $.gulp.watch('img/**/*.{svg}', ['svg']);
+    $.gulp.watch('sass/**/*.scss', $.gulp.series('sass'));
+    $.gulp.watch('*.html', $.gulp.series('html'));
+    $.gulp.watch('js/**/*.js', $.gulp.series('scripts'));
+    $.gulp.watch('css/**/*.css', $.gulp.series('css'));
+    $.gulp.watch('img/**/*.{png,jpg,svg}', $.gulp.series('allimg'));
+    $.gulp.watch('img/**/*.{svg}', $.gulp.series('svg'));
   });
 };
