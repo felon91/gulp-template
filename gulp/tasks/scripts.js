@@ -11,7 +11,7 @@ module.exports = function () {
         .pipe($.gp.babel({presets: ["@babel/preset-env"]}))
         .pipe($.gp.concat('all.js'))
         .pipe($.gp.uglify())
-        .pipe($.rename('all.min.js'))
+        .pipe($.gp.rename('all.min.js'))
         .pipe($.gp.sourcemaps.write(''))
         .pipe($.gulp.dest('./build/js'))
         .pipe($.browserSync.stream());

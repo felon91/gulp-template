@@ -11,7 +11,7 @@ module.exports = function () {
         //.pipe($.gulp.dest('build/css'))
         //.pipe($.browserSync.stream())
         .pipe($.gp.csso())
-        .pipe($.rename('style.min.css'))
+        .pipe($.gp.rename('style.min.css'))
         .pipe($.gp.sourcemaps.write(''))
         .pipe($.gulp.dest('build/css'))
         .pipe($.browserSync.stream());

@@ -1,7 +1,6 @@
 global.$ = {
   gulp: require('gulp'),
   gp:   require('gulp-load-plugins')(),
-  rename: require('gulp-rename'),
   browserSync: require('browser-sync').create(),
   rollup: require('rollup'),
   imageminJpegRecompress: require('imagemin-jpeg-recompress'),

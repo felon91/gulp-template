@@ -8,7 +8,7 @@ module.exports = function () {
         //.pipe($.gulp.dest('build/css'))
         //.pipe($.browserSync.stream())
         .pipe($.gp.csso())
-        .pipe($.rename('all.min.css'))
+        .pipe($.gp.rename('all.min.css'))
         .pipe($.gp.sourcemaps.write(''))
         .pipe($.gulp.dest('build/css'))
         .pipe($.browserSync.stream());
